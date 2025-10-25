@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aabid Ahmed — Portfolio</title>
+  <title>Sachin's -Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,30 +15,37 @@
     <aside class="sidebar">
       <div class="profile-card">
         <div class="profile-image-container">
-          <img src="assets/profile.png" alt="Aabid Ahmed" class="profile-image">
+          <img src="assets/profile.png" alt="Sachin Saud" class="profile-image">
           <div class="status-indicator"></div>
         </div>
         <h1 class="profile-name">Sachin Saud</h1>
         <p class="profile-title">Mechanical Engineer</p>
-        <p class="profile-description">A Mechanical Engineer who has crafted countless user experiences.</p>
+        <p class="profile-description">Mechanical Engineer | Scientific Machine Learning | Design and Automation</p>
         <div class="social-icons">
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-dribbble"></i></a>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
           <a href="#"><i class="fab fa-github"></i></a>
         </div>
+        <div class="profile-actions">
+          <a href="#resume" class="btn small-btn"><i class="fas fa-file-alt"></i> Resume</a>
+          <a href="#projects" class="btn small-btn"><i class="fas fa-folder-open"></i> Projects</a>
+        </div>
       </div>
     </aside>
     <main class="main-content">
       <div class="content-wrapper">
         <header class="main-header">
-          <div class="header-icons">
-            <a href="#"><i class="fas fa-home"></i></a>
-            <a href="#"><i class="fas fa-folder-open"></i></a>
-            <a href="#"><i class="fas fa-briefcase"></i></a>
-            <a href="#"><i class="fas fa-cog"></i></a>
+          <nav class="header-icons" aria-label="Main navigation">
+            <a href="#about" class="nav-item" aria-label="About Me"><i class="fas fa-user"></i><span>About Me</span></a>
+            <a href="blog.html" class="nav-item" aria-label="Blog"><i class="fas fa-blog"></i><span>Blog</span></a>
+            <a href="#reads" class="nav-item" aria-label="Reads"><i class="fas fa-book"></i><span>Reads</span></a>
+            <a href="research.html" class="nav-item" aria-label="Research"><i class="fas fa-flask"></i><span>Research</span></a>
+            <a href="#contact" class="nav-item" aria-label="Contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
+          </nav>
+          <div class="header-actions">
+            <a href="#contact" class="btn">Hire Me</a>
           </div>
-          <a href="#contact" class="btn hire-me-btn">Hire Me</a>
         </header>
 
         <section id="hero">
@@ -49,20 +56,6 @@
           <p class="section-subtitle">Passionate about creating intuitive and engaging mechanical designs. Specialize in transforming ideas into beautifully crafted products.</p>
         </section>
 
-        <section id="stats" class="stats-section">
-          <div class="stat-item">
-            <span class="stat-number">+12</span>
-            <span class="stat-label">YEARS OF STUDY</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">+46</span>
-            <span class="stat-label">YEARS OF EXPERIENCE</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">+20</span>
-            <span class="stat-label">YEARS OF EXPERIENCE</span>
-          </div>
-        </section>
 
         <section id="cards" class="cards-section">
           <div class="card orange-card">
@@ -75,78 +68,231 @@
           </div>
         </section>
 
-        <section id="experience" class="experience-section">
-          <h2 class="section-title">12 YEARS OF <span class="highlight">STUDY</span></h2>
-          <div class="experience-item">
-            <div class="experience-info">
-              <h4>Mechanical Engineering</h4>
-              <p>Studied Mechanical Engineering for 12 years.</p>
-            </div>
-            <div class="experience-date">
-              <p>2013 - 2025</p>
-            </div>
-          </div>
-        </section>
 
         <section id="projects" class="projects-section">
           <h2 class="section-title">FEATURED <span class="highlight">PROJECTS</span></h2>
-          <div class="project-grid">
-            <div class="project-card">
-              <img src="assets/project1.jpeg" alt="Project 1">
-              <div class="project-info">
-                <h4>Project One</h4>
-                <p>Web Design</p>
+          <div class="project-carousel-container">
+            <div class="project-carousel">
+              <div class="project-card active" data-index="0">
+                <div class="project-image">
+                  <img src="assets/electric_bike.jpg" alt="Mechanical Design Project">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Bobber Model Electric Bike</h3>
+                  <p class="project-description">First electric bike made in bobber-cruiser model nation wide.</p>
+                  <div class="project-tech">
+                    <span class="tech-tag">SOLIDWORKS</span>
+                    <span class="tech-tag">ANSYS</span>
+                    <span class="tech-tag">AutoCAD</span>
+                    <span class="tech-tag">+3</span>
+                  </div>
+                  <div class="project-actions">
+                    <button class="view-details-btn">
+                      View Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="action-icons">
+                      <i class="fas fa-bookmark"></i>
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card" data-index="1">
+                <div class="project-image">
+                  <img src="assets/surrogate_model.png" alt="Simulation Analysis Project">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Surrogate Model using Graph Neural Network</h3>
+                  <p class="project-description">Developed a surrogate model leveraging graph neural networks for predicting the fatigue life of a stepped shaft.</p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">PyVista</span>
+                    <span class="tech-tag">ANSYS</span>                   
+                    <span class="tech-tag">ParaView</span>
+                  </div>
+                  <div class="project-actions">
+                    <button class="view-details-btn">
+                      View Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="action-icons">
+                      <i class="fas fa-bookmark"></i>
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card" data-index="2">
+                <div class="project-image">
+                  <img src="assets/project3.png" alt="Engineering Dashboard">
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Engineering Dashboard</h3>
+                  <p class="project-description">Interactive engineering dashboard for project management.</p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">+4</span>
+                  </div>
+                  <div class="project-actions">
+                    <button class="view-details-btn">
+                      View Details <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <div class="action-icons">
+                      <i class="fas fa-bookmark"></i>
+                      <i class="fas fa-external-link-alt"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="project-card">
-              <img src="assets/project2.jpeg" alt="Project 2">
-              <div class="project-info">
-                <h4>Project Two</h4>
-                <p>SaaS Platform</p>
+            
+            <div class="carousel-controls">
+              <button class="carousel-btn prev-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
               </div>
+              <button class="carousel-btn next-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
-            <div class="project-card">
-              <img src="assets/project3.png" alt="Project 3">
-              <div class="project-info">
-                <h4>Project Three</h4>
-                <p>Mobile App</p>
-              </div>
-            </div>
-            <div class="project-card">
-              <img src="assets/project1.jpeg" alt="Project 4">
-              <div class="project-info">
-                <h4>Project Four</h4>
-                <p>E-commerce</p>
-              </div>
-            </div>
-            <div class="project-card">
-              <img src="assets/project2.jpeg" alt="Project 5">
-              <div class="project-info">
-                <h4>Project Five</h4>
-                <p>Dashboard</p>
-              </div>
-            </div>
+          </div>
+          <div class="view-all-projects">
+            <button class="view-all-btn">View All Projects</button>
           </div>
         </section>
 
         <section id="tools" class="tools-section">
-          <h2 class="section-title">PREMIUM <span class="highlight">TOOLS</span></h2>
-          <div class="tools-grid">
-            <div class="tool-item">
-              <i class="fab fa-figma"></i>
-              <p>Figma</p>
+          <div class="skills-header">
+            <h2 class="skills-title">SKILLS</h2>
+          </div>
+          
+          <div class="skills-categories">
+            <!-- CAD Category -->
+            <div class="skill-category">
+              <div class="skill-icon">
+                <i class="fas fa-cube"></i>
+              </div>
+              <h3 class="skill-name">CAD</h3>
+              <div class="skill-bar"></div>
+              <div class="skill-tools">
+                <img src="https://download.logo.wine/logo/SolidWorks/SolidWorks-Logo.wine.png" alt="SolidWorks">
+                <img src="https://1000logos.net/wp-content/uploads/2021/04/AutoCAD-logo.png" alt="AutoCAD">
+              </div>
             </div>
-            <div class="tool-item">
-              <i class="fab fa-framer"></i>
-              <p>Framer</p>
+
+            <!-- Programming Category -->
+            <div class="skill-category">
+              <div class="skill-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="skill-name">Programming</h3>
+              <div class="skill-bar"></div>
+              <div class="skill-tools">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="MATLAB">
+              </div>
             </div>
-            <div class="tool-item">
-              <i class="fas fa-robot"></i>
-              <p>ChatGPT</p>
+
+            <!-- Simulation Category -->
+            <div class="skill-category">
+              <div class="skill-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="skill-name">Simulation</h3>
+              <div class="skill-bar"></div>
+              <div class="skill-tools">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Ansys_logo.png" alt="ANSYS">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Simulink_Logo_%28non-wordmark%29.png" alt="Simulink">
+              </div>
             </div>
-            <div class="tool-item">
-              <i class="fab fa-react"></i>
-              <p>Next.js</p>
+          </div>
+        </section>
+
+        <section id="certificates" class="certificates-section">
+          <h2 class="section-title" style="text-align: center;">MY <span class="highlight">CERTIFICATES</span></h2>
+          
+          <div class="certificates-grid">
+            <!-- SolidWorks Certificate -->
+            <div class="certificate-card">
+              <div class="certificate-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="certificate-content">
+                <h3 class="certificate-title">SOLIDWORKS Professional</h3>
+                <p class="certificate-issuer">Dassault Systèmes</p>
+                <div class="certificate-meta">
+                  <span class="certificate-date">
+                    <i class="fas fa-calendar"></i>
+                    2023
+                  </span>
+                  <span class="certificate-id">
+                    <i class="fas fa-hashtag"></i>
+                    C-123456
+                  </span>
+                </div>
+                <a href="#" class="certificate-link">
+                  <span>View Certificate</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- AutoCAD Certificate -->
+            <div class="certificate-card">
+              <div class="certificate-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="certificate-content">
+                <h3 class="certificate-title">AutoCAD Professional</h3>
+                <p class="certificate-issuer">Autodesk</p>
+                <div class="certificate-meta">
+                  <span class="certificate-date">
+                    <i class="fas fa-calendar"></i>
+                    2024
+                  </span>
+                  <span class="certificate-id">
+                    <i class="fas fa-hashtag"></i>
+                    A-789012
+                  </span>
+                </div>
+                <a href="#" class="certificate-link">
+                  <span>View Certificate</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- ANSYS Certificate -->
+            <div class="certificate-card">
+              <div class="certificate-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="certificate-content">
+                <h3 class="certificate-title">ANSYS Simulation</h3>
+                <p class="certificate-issuer">ANSYS Learning Hub</p>
+                <div class="certificate-meta">
+                  <span class="certificate-date">
+                    <i class="fas fa-calendar"></i>
+                    2024
+                  </span>
+                  <span class="certificate-id">
+                    <i class="fas fa-hashtag"></i>
+                    S-345678
+                  </span>
+                </div>
+                <a href="#" class="certificate-link">
+                  <span>View Certificate</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -165,3 +311,4 @@
   <script src="sccript.js"></script>
 </body>
 </html>
+
